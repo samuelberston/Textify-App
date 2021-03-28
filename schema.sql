@@ -10,10 +10,10 @@ CREATE TABLE msgs (
   to INT NOT NULL,
   -- from INT NOT NULL,
   -- text VARCHAR(255) NOT NULL,
-  time VARCHAR(12) NOT NULL
+  cron VARCHAR(12) NOT NULL
 );
 
-INSERT INTO TABLE (title, to, time) VALUES ('trash', '4151234567', 'time');
+INSERT INTO TABLE (title, to, time) VALUES ('trash', '4151234567', '* * * * * *');
 INSERT INTO TABLE (title, to, time) VALUES ('trash', '4151234567', 'time');
 INSERT INTO TABLE (title, to, time) VALUES ('trash', '4151234567', 'time');
 INSERT INTO TABLE (title, to, time) VALUES ('trash', '4151234567', 'time');
