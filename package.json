@@ -4,8 +4,11 @@
   "description": "textify",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server/server.js",
     "lint": "./node_modules/.bin/eslint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --watch",
+    "build": "./node_modules/.bin/babel ./client/src -d lib --watch"
   },
   "repository": {
     "type": "git",
@@ -18,18 +21,24 @@
   },
   "homepage": "https://github.com/samuelberston/MVP#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "express": "^4.17.1",
     "nodemon": "^2.0.7",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "webpack": "^5.28.0"
+    "webpack": "^5.28.0",
+    "webpack-cli": "^4.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.13.13",
     "@babel/plugin-transform-modules-commonjs": "^7.13.8",
+    "@babel/plugin-transform-react-jsx": "^7.13.12",
     "@babel/preset-env": "^7.13.12",
     "@babel/preset-react": "^7.13.13",
+    "babel-cli": "^6.26.0",
     "babel-loader": "^8.2.2",
+    "eslint": "^7.23.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
