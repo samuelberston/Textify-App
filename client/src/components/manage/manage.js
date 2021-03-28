@@ -1,33 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Message from './message';
+import Message from './Message';
 
-class Manage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selected: null,
-    };
-  }
-
-  render() {
-    const { messages } = this.props;
-    const { selected } = this.state;
-
-    return (
-      <div id="manage">
-        <div id="messages">
-          {messages.forEach((msg) => (
-            <div id="message">
-              <Message title={msg.title} />
-            </div>
-          ))}
+const Manage = ({ messages }) => (
+  <div id="manage">
+    <div id="messages">
+      {messages.map((msg) => (
+        <div id="message">
+          <Message title={msg.title} />
         </div>
-      </div>
-    );
-  }
+      ))}
+    </div>
+  </div>
+);
 
-}
+Manage.propTypes = {
+  messages: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
+};
 
 export default Manage;

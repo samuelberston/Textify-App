@@ -1,7 +1,7 @@
 const messages = [
-  { title: 'hello' },
-  { titile: 'it/s me ' },
-  { title: 'sup?' },
+  { title: 'trash' },
+  { title: 'gardener' },
+  { title: 'goodmorning' },
 ];
 
 export default messages;
