@@ -13,7 +13,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: rgba(255, 255, 255, 0.61);
-   font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #header {
@@ -35,7 +35,7 @@
   grid-template-columns: 2fr 1fr;
   justify-content: space-around;
   /* align-items: center; */
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 75%;
 }
 
@@ -46,7 +46,7 @@
   align-items: center;
   margin: 20px;
   padding: 20px;
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(219, 219, 219);
   border-radius: 5px;
   color: rgb(19, 19, 19);
   font-family: Arial, Helvetica, sans-serif;
@@ -69,12 +69,30 @@
 }
 
 #manageContainer {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
   margin: 20px;
   padding: 20px;
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(219, 219, 219);
   border-radius: 5px;
-  color: rgb(19, 19, 19);
+  color: rgb(49, 49, 49);
+  font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#manageContainer h3 {
+  height: 16px;
+  margin: -10px 0 0px 0px;
+  align-self: flex-start;
+}
+
+#messages {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 #message {
@@ -82,12 +100,16 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin: 10px;
-  border: 3px solid salmon;
+  margin-top: 15px;
   background-color: salmon;
-  border-radius: 10px;
+  border-radius: 5px;
   height: 30px;
+  width: 100%;
   color: white;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
+}
+
+#message #edit:hover {
+  cursor: pointer;
 }

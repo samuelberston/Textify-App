@@ -7,7 +7,8 @@ const Message = ({ title }) => (
       {title}
     </div>
     <div id="edit">
-      <input type="button" name="edit" value="edit" />
+      <span className="fa fa-edit" type="button" />
+      {/* <input type="button" name="edit" value="edit" /> */}
     </div>
   </div>
 );
