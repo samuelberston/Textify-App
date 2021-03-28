@@ -27,7 +27,7 @@ class Content extends React.Component {
           <input id="title" type="text" placeholder="title" required />
           <input id="to" type="number" placeholder="(123) 456-7890" required />
           <input id="from" type="number" placeholder="(123) 456-7890" required />
-          <input id="message" type="text" placeholder="Good morning, love!" required />
+          <input id="text" type="text" placeholder="Good morning, love!" required />
           <input type="submit" value="confirm" />
         </form>
       </div>
