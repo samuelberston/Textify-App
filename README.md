@@ -1,5 +1,19 @@
 The goal of this project is to build an app that allows a user to schedule automated text messages.
 
+
+
+
+
+*system design*
+
+Service-Oriented Architecture
+- client
+- server
+- database
+- service
+
+Diagram
+
 *technologies*
 
 developer
