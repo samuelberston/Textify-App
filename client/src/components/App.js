@@ -6,8 +6,11 @@ import messages from '../dummydata/__messages__';
 
 const App = () => (
   <div id="container">
-    <Schedule />
-    <Manage messages={messages} />
+    <h2> textify </h2>
+    <div id="controller">
+      <Schedule />
+      <Manage messages={messages} />
+    </div>
   </div>
 );
 

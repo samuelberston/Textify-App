@@ -6,8 +6,8 @@ const Message = ({ title }) => (
     <div id="title">
       {title}
     </div>
-    <div>
-      <input type="radio" name="edit" />
+    <div id="edit">
+      <input type="button" name="edit" value="edit" />
     </div>
   </div>
 );

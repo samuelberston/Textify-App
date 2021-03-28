@@ -1,0 +1,50 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+#controller {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#scheduleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+#schedule {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* width: 50%; */
+}
+
+#timeForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#contentForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#manageContainer {
+  border: 1px solid black;
+}
+
+#message {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  border: 2px solid rgb(12, 93, 216);
+}

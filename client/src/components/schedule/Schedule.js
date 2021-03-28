@@ -45,12 +45,17 @@ class Schedule extends React.Component {
 
   render() {
     return (
-      <div id="schedule">
-        <form name="schedule" onSubmit={this.onSubmit}>
+      <div id="scheduleContainer">
+        <h3>
+          Schedule Your Text
+        </h3>
+        <div id="schedule">
           <Time confirmtime={this.confirmTime} />
           <Content confirmContent={this.confirmContent} />
-          <input type="submit" value="schedule" />
-        </form>
+        </div>
+        <div id="scheduleButton">
+          <input type="button" value="schedule" onClick={this.onSubmit} />
+        </div>
       </div>
     );
   }
