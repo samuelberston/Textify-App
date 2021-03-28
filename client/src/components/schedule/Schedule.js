@@ -9,16 +9,17 @@ class Schedule extends React.Component {
     super(props);
     this.state = {
       content: null,
-      schedule: null,
+      time: null,
     };
     this.onSubmit = this.onSubmit.bind(this);
     this.confirmContent = this.confirmContent.bind(this);
+    this.confirmTime = this.confirmTime.bind(this);
   }
 
   onSubmit(e) {
     e.preventDefault();
-    const { content, schedule } = this.state;
-    const body = { content, schedule };
+    const { content, time } = this.state;
+    const body = { content, time };
     axios.post('/messages', body)
       .then((res) => {
         console.log(res);
@@ -35,11 +36,18 @@ class Schedule extends React.Component {
     });
   }
 
+  confirmTime(e, time) {
+    e.preventDefault();
+    this.setState({
+      time,
+    });
+  }
+
   render() {
     return (
       <div id="schedule">
         <form name="schedule" onSubmit={this.onSubmit}>
-          <Time />
+          <Time confirmtime={this.confirmTime} />
           <Content confirmContent={this.confirmContent} />
           <input type="submit" value="schedule" />
         </form>

@@ -10,10 +10,11 @@ class Time extends React.Component {
   }
 
   render() {
+    const { confirmTime } = this.props;
     const { time } = this.state;
     return (
       <div id="time">
-        <form>
+        <form onSubmit={confirmTime.bind(time)}>
           <input id="dayOfWeek" type="string" placeholder="day of the week" />
           <input id="month" type="month" placeholder="month" />
           <input id="dayOfMonth" type="number" min="1" max="31" placeholder="day of the month" />
@@ -24,5 +25,9 @@ class Time extends React.Component {
     );
   }
 }
+
+Time.propTypes = {
+  confirmTime: PropTypes.func.isRequired,
+};
 
 export default Time;
