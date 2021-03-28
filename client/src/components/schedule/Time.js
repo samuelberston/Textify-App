@@ -14,7 +14,7 @@ class Time extends React.Component {
     const { time } = this.state;
     return (
       <div id="time">
-        <form onSubmit={confirmTime.bind(time)}>
+        <form onSubmit={confirmTime}>
           <input id="dayOfWeek" type="string" placeholder="day of the week" />
           <input id="month" type="month" placeholder="month" />
           <input id="dayOfMonth" type="number" min="1" max="31" placeholder="day of the month" />

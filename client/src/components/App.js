@@ -1,21 +1,14 @@
 import React from 'react';
 import Schedule from './schedule/Schedule';
+import Manage from './manage/Manage';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+import messages from '../dummydata/__messages__';
 
-    };
-  }
-
-  render() {
-    return (
-      <div id="container">
-        <Schedule />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div id="container">
+    <Schedule />
+    <Manage messages={messages} />
+  </div>
+);
 
 export default App;
