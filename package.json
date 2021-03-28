@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/samuelberston/MVP#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "axios": "^0.21.1",
     "express": "^4.17.1",
     "mysql2": "^2.2.5",
