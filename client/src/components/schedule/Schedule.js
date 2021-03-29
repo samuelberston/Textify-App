@@ -46,9 +46,11 @@ class Schedule extends React.Component {
   render() {
     return (
       <div id="scheduleContainer">
-        <h3>
-          Schedule Your Text
-        </h3>
+        <div id="scheduleTitle">
+          <h3> Schedule Your Text </h3>
+          &nbsp; &nbsp;
+          <i className="fa fa-clock" />
+        </div>
         <div id="schedule">
           <Time confirmtime={this.confirmTime} />
           <Content confirmContent={this.confirmContent} />
