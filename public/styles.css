@@ -5,7 +5,6 @@
 #container {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   height: 103%;
   background-image: url("background.jpg");
@@ -25,6 +24,7 @@
   height: 60px;
   background-color: rgba(34, 34, 34, 0.486);
   transition: all 0.15s ease;
+  position: sticky;
 }
 
 #header:hover {
@@ -33,18 +33,12 @@
 
 #header svg {
   font-size: 40px;
-
-}
-#header:hover {
-
 }
 
 #controller {
   display: grid;
   grid-template-columns: 2fr 1fr;
   justify-content: space-around;
-  /* align-items: center; */
-  /* border: 1px solid black; */
   width: 75%;
 }
 
@@ -148,6 +142,6 @@
 }
 
 #message #edit:hover {
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(218, 218, 218);
   border-radius: 3px;
 }
