@@ -162,10 +162,14 @@
   color: rgb(64, 173, 224);
 }
 
-/* #addMessage p {
-  height: 20px;
-  font-size: 20px;
-} */
+#addMessage svg {
+  padding: 6px 9px 6px 9px;
+}
+
+#addMessage:hover svg  {
+  background-color: rgba(224, 224, 224, 0.61);
+  border-radius: 50%;
+}
 
 .modal {
   visibility: hidden;
