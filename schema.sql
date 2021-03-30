@@ -10,11 +10,10 @@ CREATE TABLE msgs (
   receiver VARCHAR(14) NOT NULL,
   sender VARCHAR(14) NOT NULL,
   text VARCHAR(255) NOT NULL,
-  cron VARCHAR(12) NOT NULL
+  cron VARCHAR(13) NOT NULL
 );
 
-INSERT INTO msgs (message_id, title, receiver, sender, text, cron) VALUES (1, "trash", "+14151234567", "+14158468793", "text", "* * * * *");
-INSERT INTO msgs (message_id, title, receiver, sender, text, cron) VALUES (2, "gardener", "+14151234567", "+14158468793", "text", "* * * * *");
-INSERT INTO msgs (message_id, title, receiver, sender, text, cron) VALUES (3, "good morning", "+14151234567", "+14158468793", "text", "time");
-INSERT INTO msgs (message_id, title, receiver, sender, text, cron) VALUES (4, "reminder", "+14151234567", "+14158468793", "text", "time");
-INSERT INTO msgs (message_id, title, receiver, sender, text, cron) VALUES (5, "Rhonda", "+14151234567", "+14158468793", "text", "time");
+INSERT INTO msgs (message_id, title, receiver, sender, text, cron) VALUES (1, "trash", "+14151234567", "+14158468793", "Remember to take out the trash!", "* * * * *");
+INSERT INTO msgs (message_id, title, receiver, sender, text, cron) VALUES (2, "good morning", "+14151234567", "+14158468793", "good morning beautiful !", "* * * * *");
+INSERT INTO msgs (message_id, title, receiver, sender, text, cron) VALUES (3, "Rhonda", "+14151234567", "+14158468793", "Did you remember to water the plants??", "* * * * *");
+INSERT INTO msgs (message_id, title, receiver, sender, text, cron) VALUES (4, "reminder", "+14151234567", "+14158468793", "buy tickets to edc", "* * * * *");

@@ -1,20 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Message = ({ title }) => (
+const Message = ({ msg }) => (
   <div id="message">
     <div id="title">
-      {title}
+      {msg.title}
+    </div>
+    <div id="to">
+      to: &nbsp;
+      {msg.receiver}
+    </div>
+    <div id="text">
+      {msg.text}
     </div>
     <div id="edit">
       <span className="fa fa-edit" type="button" />
-      {/* <input type="button" name="edit" value="edit" /> */}
     </div>
   </div>
 );
 
 Message.propTypes = {
-  title: PropTypes.string.isRequired,
+  msg: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
 export default Message;
