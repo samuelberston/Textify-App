@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Message from './Message';
+import AddMessage from './AddMessage';
 
 const Manage = ({ messages }) => (
   <div id="manageContainer">
     <h3>
-      Manage Scheduled Texts
+      Scheduled Texts
     </h3>
-    <div id="manage">
-      <div id="messages">
-        {messages.map((msg) => (
-          <Message title={msg.title} />
-        ))}
-      </div>
+    <div id="messages">
+      {messages.map((msg) => (
+        <Message msg={msg} />
+      ))}
+      <AddMessage />
     </div>
   </div>
 );

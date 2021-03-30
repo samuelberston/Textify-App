@@ -7,9 +7,10 @@
   flex-direction: column;
   align-items: center;
   height: 103%;
+  width: 100%;
   background-image: url("background.jpg");
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat:repeat-x;
   background-size: cover;
   color: rgba(255, 255, 255, 0.61);
   font-family: Arial, Helvetica, sans-serif;
@@ -37,9 +38,134 @@
 
 #controller {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   justify-content: space-around;
-  width: 75%;
+  width: 100%;
+}
+
+
+#manageContainer {
+  justify-self: center;
+  grid-column: 2;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgb(247, 247, 247);
+  border-radius: 5px;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#manageContainer:hover {
+  cursor: pointer;
+}
+
+#manageContainer h3 {
+  height: 16px;
+  color: rgb(58, 58, 58);
+  margin: -10px 10px 0px 12px;
+  align-self: flex-start;
+}
+
+
+#messages {
+  justify-self: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  top: 5px;
+}
+
+#addMessageContainer{
+  height: 150px;
+}
+
+#message, #addMessage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 10px;
+  padding: 2px;
+  background-color: rgb(253, 253, 253);
+  border-radius: 5px;
+  border-bottom: solid 1px rgb(167, 167, 167);
+  height: 150px;
+  width: 95%;
+  color: rgb(65, 65, 65);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  transition:  all 0.15s ease;
+}
+
+#message:hover, #addMessage:hover {
+  /* background-color: rgb(249, 249, 249); */
+  cursor: pointer;
+}
+
+#message #title {
+  margin: 5px;
+  height: 20px;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(31, 31, 31);
+}
+
+#message #to {
+  margin: 10px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  color:rgb(58, 58, 58);
+}
+
+#message #text {
+  margin: 10px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  color:rgb(58, 58, 58);
+}
+
+#message #edit {
+  justify-self: flex-end;
+  height: 15px;
+  padding: 5px;
+  margin: 10px;
+  visibility: hidden;
+  font-size: 18px;
+  color: rgb(64, 173, 224);
+}
+
+#message:hover #edit {
+  cursor: pointer;
+  visibility: visible;
+  transition:  all 0.2s ease;
+}
+
+#message #edit:hover {
+  background-color: rgb(218, 218, 218);
+  border-radius: 3px;
+}
+
+#addMessage {
+  justify-content: center;
+  align-items: center;
+  font-size: 64px;
+  color: rgb(64, 173, 224);
+}
+
+.modal {
+  visibility: hidden;
+}
+
+.modalShow {
+  visibility: visible;
 }
 
 #scheduleContainer {
@@ -49,17 +175,21 @@
   align-items: center;
   margin: 20px;
   padding: 20px;
-  background-color: rgb(233, 233, 233);
+  background-color: white;
+  border-bottom: grey;
   border-radius: 5px;
   color: rgb(19, 19, 19);
   font-family: Arial, Helvetica, sans-serif;
+  z-index: 100;
+  position: relative;
+  bottom:  300%;
+  left: 50%;
 }
 
 #schedule {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* width: 50%; */
-}
+ }
 
 #scheduleTitle {
   display: flex;
@@ -80,86 +210,64 @@
   flex-direction: column;
 }
 
-#manageContainer {
-  width: 220px;
+/*
+
+CONTACTS
+
+*/
+
+#contactsContainer {
+  grid-column: 3;
   height: max-content;
+  margin: 20px 20px 20px 50px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  margin: 20px;
-  padding: 20px;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(233, 233, 233);
   border-radius: 5px;
-   font-size: 13px;
+  font-size: 13px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#manageContainer:hover {
-  cursor: pointer;
-}
 
-#manageContainer h3 {
+h3 {
   height: 16px;
   color: rgb(58, 58, 58);
-  margin: -10px 5px 0px 5px;
+  margin: -10px 10px 0px 12px;
+  margin-bottom: -20px;
   align-self: flex-start;
 }
 
-#messages {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  position:relative;
-  top: 5px;
-}
-
-#message {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  margin: 3px 3px;
-  background-color: white;
-  border-radius: 5px;
-  border-bottom: solid 1px rgb(167, 167, 167);
+#contacts {
   height: max-content;
   width: 100%;
-  color: rgb(65, 65, 65);
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 100;
-  transition:  all 0.15s ease;
+  justify-content: center;
+  /* margin: 20px 0 0 50px; */
+  padding: 20px;
 }
 
-#message:hover {
-  background-color: whitesmoke;
-  cursor: pointer;
+#contact, #addContact {
+  margin: 10px;
+  padding: 15px;
+  height: max-content;
+  background-color: white;
+  border-radius: 5px;
+  border-bottom: 1px solid grey;
+  color: rgb(19, 19, 19);
 }
 
-#message #title {
-  justify-self: flex-start;
+#addContact {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin: 10px;
-  height: max-content
+  font-size: 64;
+  color: rgb(64, 173, 224);
 }
 
-#message #edit {
-  justify-self: flex-end;
-  height: 15px;
-  padding: 5px;
-  margin: 10px;
-  visibility: hidden;
-  color: rgb(121, 121, 121);
-}
 
-#message:hover #edit {
-   cursor: pointer;
-  visibility: visible;
-  transition:  all 0.15s ease;
-}
-
-#message #edit:hover {
-  background-color: rgb(218, 218, 218);
-  border-radius: 3px;
+#contact:hover, #addContact:hover {
+  /* background-color: whitesmoke; */
+  cursor: pointer;
 }

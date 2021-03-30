@@ -2,10 +2,11 @@ import React from 'react';
 import axios from 'axios';
 
 import Header from './header/Header';
-import Schedule from './schedule/Schedule';
 import Manage from './manage/Manage';
+import Contacts from './contacts/Contacts';
 
 // import messages from '../dummydata/__messages__';
+import contacts from './contacts/__contacts__';
 
 class App extends React.Component {
   constructor(props) {
@@ -38,10 +39,10 @@ class App extends React.Component {
       <div id="container">
         <Header />
         <div id="controller">
-          <Schedule />
           { messages !== null
             ? <Manage messages={messages} />
             : ''}
+          <Contacts contacts={contacts} />
         </div>
       </div>
     );

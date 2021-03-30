@@ -56,8 +56,9 @@ class Schedule extends React.Component {
   }
 
   render() {
+    const { clicked } = this.props;
     return (
-      <div id="scheduleContainer">
+      <div id="scheduleContainer" className={`modal ${clicked ? 'modalShow' : ''}`}>
         <div id="scheduleTitle">
           <h3> Schedule Your Text </h3>
           &nbsp; &nbsp;
