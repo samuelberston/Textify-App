@@ -26,6 +26,7 @@ class Schedule extends React.Component {
       text: content.text,
       cron: time,
     };
+    console.log(body);
     axios.post('/messages', body)
       .then((res) => {
         console.log(res);
