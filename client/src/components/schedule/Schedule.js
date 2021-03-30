@@ -11,15 +11,21 @@ class Schedule extends React.Component {
       content: null,
       time: null,
     };
-    this.onSubmit = this.onSubmit.bind(this);
+    this.postMessage = this.postMessage.bind(this);
     this.confirmContent = this.confirmContent.bind(this);
     this.confirmTime = this.confirmTime.bind(this);
   }
 
-  onSubmit(e) {
+  postMessage(e) {
     e.preventDefault();
     const { content, time } = this.state;
-    const body = { content, time };
+    const body = {
+      title: content.title,
+      receiver: content.to,
+      sender: content.from,
+      text: content.text,
+      cron: time,
+    };
     axios.post('/messages', body)
       .then((res) => {
         console.log(res);
@@ -52,11 +58,11 @@ class Schedule extends React.Component {
           <i className="fa fa-clock" />
         </div>
         <div id="schedule">
-          <Time confirmtime={this.confirmTime} />
+          <Time confirmTime={this.confirmTime} />
           <Content confirmContent={this.confirmContent} />
         </div>
         <div id="scheduleButton">
-          <input type="button" value="schedule" onClick={this.onSubmit} />
+          <input type="button" value="schedule" onClick={this.postMessage} />
         </div>
       </div>
     );

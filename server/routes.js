@@ -1,6 +1,7 @@
 const express = require('express');
 const controllers = require('./controllers/controllers.js');
 const db = require('./db.js');
+
 const router = express.Router();
 
 router.get('/messages', (req, res) => {
