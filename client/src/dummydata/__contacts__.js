@@ -1,4 +1,4 @@
-module.exports.contacts = [
+const contacts = [
   {
     firstName: 'Sam',
     lastName: 'Berston',
@@ -31,3 +31,5 @@ module.exports.contacts = [
     },
   },
 ];
+
+export default contacts;

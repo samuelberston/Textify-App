@@ -1,7 +1,8 @@
 import React from 'react';
-import __contacts__ from '../dummydata/__contacts__';
+import contacts from 'client/src/dummydata/__contacts__';
 
-const Contacts = ({ contacts }) => (
+
+const Contacts = () => (
   <div id="contacts">
 
   </div>
