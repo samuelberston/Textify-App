@@ -275,6 +275,7 @@ h3 {
   height: max-content;
   width: 100%;
   justify-content: center;
+  align-items: center;
   /* margin: 20px 0 0 50px; */
   padding: 20px;
 }
@@ -282,14 +283,16 @@ h3 {
 #contact, #addContact {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin: 10px;
   padding: 15px;
-  height: max-content;
+  height: 70px;
   background-color: white;
   border-radius: 5px;
   border-bottom: 1px solid grey;
   color: rgb(19, 19, 19);
   font-size: 18px;
+  font-weight: 100;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
