@@ -24,15 +24,6 @@ class Time extends React.Component {
     return (
       <div id="time">
         <form onSubmit={(e) => { confirmTime(e, this.state); }} id="timeForm">
-          <select id="dayOfWeek" type="string" onChange={this.handleChange}>
-            <option id="dayOfWeek" value="Monday">Monday</option>
-            <option id="dayOfWeek" value="Tuesday">Tuesday</option>
-            <option id="dayOfWeek" value="Wednesday">Wednesday</option>
-            <option id="dayOfWeek" value="Thursday">Thursday</option>
-            <option id="dayOfWeek" value="Friday">Friday</option>
-            <option id="dayOfWeek" value="Saturday">Saturday</option>
-            <option id="dayOfWeek" value="Sunday">Sunday</option>
-          </select>
           <select id="month" type="string" onChange={this.handleChange}>
             <option value="January">January</option>
             <option value="February">February</option>
@@ -48,6 +39,15 @@ class Time extends React.Component {
             <option value="December">December</option>
           </select>
           <input id="dayOfMonth" type="number" min="1" max="31" placeholder="day of the month" onChange={this.handleChange} />
+          <select id="dayOfWeek" type="string" onChange={this.handleChange}>
+            <option id="dayOfWeek" value="Monday">Monday</option>
+            <option id="dayOfWeek" value="Tuesday">Tuesday</option>
+            <option id="dayOfWeek" value="Wednesday">Wednesday</option>
+            <option id="dayOfWeek" value="Thursday">Thursday</option>
+            <option id="dayOfWeek" value="Friday">Friday</option>
+            <option id="dayOfWeek" value="Saturday">Saturday</option>
+            <option id="dayOfWeek" value="Sunday">Sunday</option>
+          </select>
           <input id="time" type="time" placeholder="time" onChange={this.handleChange} required />
           <input type="submit" value="confirm" />
         </form>
