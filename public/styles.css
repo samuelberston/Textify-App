@@ -159,6 +159,8 @@
   justify-content: center;
   align-items: center;
   font-size: 64px;
+  height: 150px;
+  width: 95%;
   color: rgb(64, 173, 224);
 }
 
@@ -306,6 +308,11 @@ h3 {
   align-items: center;
   font-size: 64;
   color: rgb(64, 173, 224);
+}
+
+#addContact:hover svg  {
+  background-color: rgba(224, 224, 224, 0.61);
+  border-radius: 50%;
 }
 
 
