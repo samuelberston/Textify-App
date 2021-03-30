@@ -69,8 +69,8 @@ class Schedule extends React.Component {
           <i className="fa fa-clock" />
         </div>
         <div id="schedule">
-          <Time confirmTime={this.confirmTime} />
           <Content confirmContent={this.confirmContent} />
+          <Time confirmTime={this.confirmTime} />
         </div>
         <div id="scheduleButton">
           <input type="button" value="schedule" onClick={this.postMessage} />

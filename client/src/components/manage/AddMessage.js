@@ -21,7 +21,7 @@ class AddMessage extends React.Component {
     const { clicked } = this.state;
     return (
       <div id="addMessageContainer">
-        <div id="addMessage" role="button" onClick={() => { this.setState({ clicked: true }); }} onKeyPress={() => { this.setState({ clicked: true }); }} tabIndex={0}>
+        <div id="addMessage" role="button" onClick={() => { this.setState({ clicked: !clicked }); }} onKeyPress={() => { this.setState({ clicked: !clicked }); }} tabIndex={0}>
           <i className="fas fa-plus" />
         </div>
         <Schedule clicked={clicked} exitModal={this.exitModal} />
