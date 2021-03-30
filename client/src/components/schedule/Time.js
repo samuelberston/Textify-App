@@ -24,10 +24,18 @@ class Time extends React.Component {
     return (
       <div id="time">
         <form onSubmit={(e) => { confirmTime(e, this.state); }} id="timeForm">
-          <input id="dayOfWeek" type="string" placeholder="day of the week" onChange={this.handleChange} />
+          <select id="dayOfWeek" type="string" placeholder="day of the week" onChange={this.handleChange} multiple>
+            <option id="dayOfWeek" value="Monday">Monday</option>
+            <option id="dayOfWeek" value="Tuesday">Tuesday</option>
+            <option id="dayOfWeek" value="Wednesday">Wednesday</option>
+            <option id="dayOfWeek" value="Thursday">Thursday</option>
+            <option id="dayOfWeek" value="Friday">Friday</option>
+            <option id="dayOfWeek" value="Saturday">Saturday</option>
+            <option id="dayOfWeek" value="Sunday">Sunday</option>
+          </select>
           <input id="month" type="month" placeholder="month" onChange={this.handleChange} />
           <input id="dayOfMonth" type="number" min="1" max="31" placeholder="day of the month" onChange={this.handleChange} />
-          <input id="time" type="time" placeholder="time" onChange={this.handleChange} />
+          <input id="time" type="time" placeholder="time" onChange={this.handleChange} required />
           <input type="submit" value="confirm" />
         </form>
       </div>
