@@ -53,9 +53,9 @@
   flex-direction: column;
   margin: 20px;
   padding: 20px;
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(247, 247, 247);
   border-radius: 5px;
-   font-size: 13px;
+  font-size: 13px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -94,7 +94,7 @@
   align-items: flex-start;
   margin: 10px;
   padding: 2px;
-  background-color: white;
+  background-color: rgb(253, 253, 253);
   border-radius: 5px;
   border-bottom: solid 1px rgb(167, 167, 167);
   height: 150px;
@@ -106,7 +106,7 @@
 }
 
 #message:hover, #addMessage:hover {
-  background-color: whitesmoke;
+  /* background-color: rgb(249, 249, 249); */
   cursor: pointer;
 }
 
@@ -138,13 +138,14 @@
   padding: 5px;
   margin: 10px;
   visibility: hidden;
-  color: rgb(121, 121, 121);
+  font-size: 18px;
+  color: rgb(64, 173, 224);
 }
 
 #message:hover #edit {
-   cursor: pointer;
+  cursor: pointer;
   visibility: visible;
-  transition:  all 0.15s ease;
+  transition:  all 0.2s ease;
 }
 
 #message #edit:hover {
@@ -174,7 +175,8 @@
   align-items: center;
   margin: 20px;
   padding: 20px;
-  background-color: rgb(233, 233, 233);
+  background-color: white;
+  border-bottom: grey;
   border-radius: 5px;
   color: rgb(19, 19, 19);
   font-family: Arial, Helvetica, sans-serif;
@@ -266,6 +268,6 @@ h3 {
 
 
 #contact:hover, #addContact:hover {
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
   cursor: pointer;
 }
