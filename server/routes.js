@@ -41,6 +41,7 @@ router.post('/messages', (req, res) => {
   res.send('posted');
 });
 
+
 router.delete('/message', (req, res) => {
   const messageId = req.query.message_id;
   // remove from db
@@ -50,6 +51,13 @@ router.delete('/message', (req, res) => {
   });
   // find cron twilio task
   // destroy task
+});
+
+router.get('/contacts', (req, res) => {
+  db.query('SELECT * FROM contacts', (err, data) => {
+    if (err) { throw err; }
+    res.status(200).send(data);
+  });
 });
 
 module.exports = router;
