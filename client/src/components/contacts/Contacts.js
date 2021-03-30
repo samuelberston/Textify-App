@@ -2,19 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Contact from './Contact';
+import AddContact from './AddContact';
 
-const Contacts = ({ contacts }) => (
-  <div id="contacts">
-    {contacts.map((contact) => (
-      <div id="contact">
-        <Contact contact={contact} />
+const Contacts = ({ contacts }) => {
+  console.log('cs', contacts);
+  return (
+    <div id="contactsContainer">
+      <h3>
+        Contacts
+      </h3>
+      <div id="contacts">
+        {contacts.map((contact) => (
+          <Contact contact={contact} />
+        ))}
+        <AddContact />
       </div>
-    ))}
-  </div>
-);
+    </div>
+  );
+};
 
 Contacts.propTypes = {
-  contacts: PropTypes.arrayOf(PropTypes.objectOf()).isRequired,
+  contacts: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Contacts;

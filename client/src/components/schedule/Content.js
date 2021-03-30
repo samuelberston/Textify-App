@@ -26,7 +26,6 @@ class Content extends React.Component {
         <form id="contentForm" onSubmit={(e) => confirmContent(e, this.state)}>
           <input id="title" type="text" placeholder="title" onChange={this.handleChange} required />
           <input id="to" type="number" placeholder="(123) 456-7890" onChange={this.handleChange} required />
-          <input id="from" type="number" placeholder="(123) 456-7890" onChange={this.handleChange} required />
           <input id="text" type="text" placeholder="Good morning, love!" onChange={this.handleChange} required />
           <input type="submit" value="confirm" />
         </form>
