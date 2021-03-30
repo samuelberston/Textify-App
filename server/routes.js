@@ -35,10 +35,17 @@ router.post('/messages', (req, res) => {
 
   // start the task
   task.start();
+
+  res.send('posted');
 });
 
-router.post('/message/delete', () => {
+router.delete('/message', (req, res) => {
+  const messageId = req.query.message_id;
   // remove from db
+  db.query(`DELETE FROM msgs WHERE message_id = ${messageId}`, (err, data) => {
+    if (err) { throw err; }
+    res.status(200).send(data);
+  });
   // find cron twilio task
   // destroy task
 });
