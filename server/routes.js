@@ -1,5 +1,6 @@
 const express = require('express');
 const cronCode = require('./controllers/controllers.js');
+const scheduleMessage = require('../service/scheduleMessage.js');
 const db = require('./db.js');
 
 const router = express.Router();
@@ -28,8 +29,12 @@ router.post('/messages', (req, res) => {
     if (err) { throw err; }
     res.status(201).send(data);
   });
-  // create a task with cron and twilio
+
+  // schedule a cron task, which is the twilio send message
+  const task = scheduleMessage(cron, text, sender, receiver);
+
   // start the task
+  task.start();
 });
 
 router.post('/message/delete', () => {
