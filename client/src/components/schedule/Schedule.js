@@ -7,10 +7,12 @@ import Time from './Time';
 class Schedule extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       content: null,
       time: null,
     };
+
     this.postMessage = this.postMessage.bind(this);
     this.confirmContent = this.confirmContent.bind(this);
     this.confirmTime = this.confirmTime.bind(this);
@@ -18,15 +20,16 @@ class Schedule extends React.Component {
 
   postMessage(e) {
     e.preventDefault();
+
     const { content, time } = this.state;
     const body = {
       title: content.title,
       receiver: content.to,
       sender: content.from,
       text: content.text,
-      cron: time,
+      time,
     };
-    console.log(body);
+
     axios.post('/messages', body)
       .then((res) => {
         console.log(res);
@@ -38,6 +41,7 @@ class Schedule extends React.Component {
 
   confirmContent(e, content) {
     e.preventDefault();
+
     this.setState({
       content,
     });
@@ -45,6 +49,7 @@ class Schedule extends React.Component {
 
   confirmTime(e, time) {
     e.preventDefault();
+
     this.setState({
       time,
     });
