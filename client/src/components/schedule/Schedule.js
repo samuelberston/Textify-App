@@ -61,7 +61,7 @@ class Schedule extends React.Component {
     return (
       <div id="scheduleContainer" className={`modal ${clicked ? 'modalShow' : ''}`}>
         <div id="exit" role="button" onClick={exitModal} onKeyPress={exitModal} tabIndex={0}>
-          X
+          <i className="fas fa-times" />
         </div>
         <div id="scheduleTitle">
           <h3> Schedule Your Text </h3>

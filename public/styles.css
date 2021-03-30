@@ -197,9 +197,24 @@
   /* transition: all 3s ease; */
 }
 
+#exit {
+  position: relative;
+  padding: 7px;
+  bottom: 7%;
+  left: 50%;
+  font-size: 16px;
+  color: grey;
+}
+
+#exit:hover {
+  background-color: rgba(189, 189, 189, 0.582);
+  border-radius: 50%;
+}
+
 #schedule {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 #scheduleTitle {
