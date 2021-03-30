@@ -310,6 +310,10 @@ h3 {
   color: rgb(64, 173, 224);
 }
 
+#addContact svg {
+  padding: 12px;
+}
+
 #addContact:hover svg  {
   background-color: rgba(224, 224, 224, 0.61);
   border-radius: 50%;
