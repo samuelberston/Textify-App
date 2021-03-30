@@ -18,6 +18,11 @@ router.post('/messages', (req, res) => {
 
   const cron = cronCode(time);
 
+  // make this ctually async
+  setTimeout(() => {
+    console.log('await');
+  }, 7000);
+
   // save it in the db
   db.query(`INSERT INTO msgs (title, receiver, sender, text, cron) VALUES ("${title}", "${receiver}", "${sender}", "${text}", "${cron}")`, (err, data) => {
     if (err) { throw err; }
