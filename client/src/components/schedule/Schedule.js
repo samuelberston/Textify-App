@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 
 import Content from './Content';
@@ -56,9 +57,12 @@ class Schedule extends React.Component {
   }
 
   render() {
-    const { clicked } = this.props;
+    const { clicked, exitModal } = this.props;
     return (
       <div id="scheduleContainer" className={`modal ${clicked ? 'modalShow' : ''}`}>
+        <div id="exit" role="button" onClick={exitModal} onKeyPress={exitModal} tabIndex={0}>
+          X
+        </div>
         <div id="scheduleTitle">
           <h3> Schedule Your Text </h3>
           &nbsp; &nbsp;
@@ -75,5 +79,10 @@ class Schedule extends React.Component {
     );
   }
 }
+
+Schedule.propTypes = {
+  clicked: PropTypes.bool.isRequired,
+  exitModal: PropTypes.func.isRequired,
+};
 
 export default Schedule;

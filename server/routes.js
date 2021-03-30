@@ -58,7 +58,9 @@ router.get('/contacts', (req, res) => {
 });
 
 router.post('/contacts', (req, res) => {
-  const { firstName, lastName, number, email } = req.body;
+  const {
+    firstName, lastName, number, email,
+  } = req.body;
   db.query(`INSERT INTO contacts (firstName, lastName, number, email) VALUES ("${firstName}", "${lastName}", "${number}", "${email}")`, (err, data) => {
     if (err) { throw err; }
     res.status(201).send(data);
