@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 
 const Message = ({ msg }) => (
   <div id="message">
+    <div id="edit">
+      <span className="fa fa-edit" type="button" />
+    </div>
     <div id="title">
       {msg.title}
     </div>
@@ -12,9 +15,6 @@ const Message = ({ msg }) => (
     </div>
     <div id="text">
       {msg.text}
-    </div>
-    <div id="edit">
-      <span className="fa fa-edit" type="button" />
     </div>
   </div>
 );
