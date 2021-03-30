@@ -1,19 +1,51 @@
 import React from 'react';
+import axios from 'axios';
 
 import Header from './header/Header';
 import Schedule from './schedule/Schedule';
 import Manage from './manage/Manage';
 
-import messages from '../dummydata/__messages__';
+// import messages from '../dummydata/__messages__';
 
-const App = () => (
-  <div id="container">
-    <Header />
-    <div id="controller">
-      <Schedule />
-      <Manage messages={messages} />
-    </div>
-  </div>
-);
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      messages: null,
+    };
+    this.getMessages = this.getMessages.bind(this);
+  }
+
+  componentDidMount() {
+    this.getMessages();
+  }
+
+  getMessages() {
+    axios.get('/messages')
+      .then((res) => {
+        this.setState({
+          messages: res.data,
+        });
+      })
+      .catch((err) => {
+        throw err;
+      });
+  }
+
+  render() {
+    const { messages } = this.state;
+    return (
+      <div id="container">
+        <Header />
+        <div id="controller">
+          <Schedule />
+          { messages !== null
+            ? <Manage messages={messages} />
+            : ''}
+        </div>
+      </div>
+    );
+  }
+}
 
 export default App;
