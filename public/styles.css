@@ -205,3 +205,13 @@
   display: flex;
   flex-direction: column;
 }
+
+/*
+
+CONTACTS
+
+*/
+
+#contacts {
+  grid-column: 3;
+}
