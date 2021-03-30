@@ -19,6 +19,8 @@ router.post('/messages', (req, res) => {
 
   const cron = cronCode(time);
 
+  console.log(cron);
+
   // make this ctually async
   setTimeout(() => {
     console.log('await');

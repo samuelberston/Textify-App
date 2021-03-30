@@ -7,8 +7,7 @@ class Content extends React.Component {
     this.state = {
       title: null,
       to: null,
-      from: null,
-      message: null,
+      text: null,
     };
     this.handleChange = this.handleChange.bind(this);
   }

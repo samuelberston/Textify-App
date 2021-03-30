@@ -1,25 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Contact = () => (
-  <div id="contact">
-    <div className="firstName">
-      Sam
+const Contact = ({ contact }) => {
+  const {
+    firstName, lastName, number, email,
+  } = contact;
+  return (
+    <div id="contact">
+      <div className="name">
+        <i className="far fa-address-card" />
+        &nbsp;
+        {firstName}
+        &nbsp;
+        {lastName}
+      </div>
+      <div className="number">
+        <i className="fas fa-phone" />
+        &nbsp;
+        {number}
+      </div>
+      <div className="email">
+        <i className="far fa-envelope" />
+        &nbsp;
+        {email}
+      </div>
     </div>
-    <div className="lastName">
-      Berston
-    </div>
-    <div className="email">
-      samuelberston@gmail.com
-    </div>
-    <div className="number">
-      +14158468793
-    </div>
-    <div className="address">
-      address
-    </div>
-  </div>
-);
+  );
+};
 
+Contact.propTypes = {
+  contact: PropTypes.objectOf(PropTypes.any).isRequired,
+};
 
 export default Contact;
