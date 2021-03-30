@@ -1,0 +1,4 @@
+module.exports = {
+  TWILIO_ACCOUNT_SID: 'AC8887b03849dfca90dfa2df97727cea52',
+  TWILIO_AUTH_TOKEN: 'c8b198f430dcc8af4af7f8214004c8ab',
+};

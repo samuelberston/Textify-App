@@ -5,9 +5,6 @@ import Header from './header/Header';
 import Manage from './manage/Manage';
 import Contacts from './contacts/Contacts';
 
-// import messages from '../dummydata/__messages__';
-// import contacts from './contacts/__contacts__';
-
 class App extends React.Component {
   constructor(props) {
     super(props);
