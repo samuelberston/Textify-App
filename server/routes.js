@@ -11,8 +11,14 @@ router.get('/messages', (req, res) => {
   });
 });
 
-router.post('/messages', () => {
+router.post('/messages', (req, res) => {
+  const body = req.body;
+  // controler function to modify time object into cron code
+  
   // save it in the db
+  db.query(`INSERT INTO msgs (title, receiver, sender, text, cron) VALUES ()`, () => {
+
+  });
   // create a task with cron and twilio
   // start the task
 });
