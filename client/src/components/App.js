@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 import Header from './header/Header';
+import About from './about/About';
 import Manage from './manage/Manage';
 import Contacts from './contacts/Contacts';
 
@@ -51,6 +52,7 @@ class App extends React.Component {
       <div id="container">
         <Header />
         <div id="controller">
+          <About />
           { messages !== null
             ? <Manage messages={messages} />
             : ''}

@@ -43,6 +43,28 @@
   width: 100%;
 }
 
+#aboutContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-column: 1;
+  width: 70%;
+  height: 400px;
+  margin: 20px 50px 20px 20px;
+  padding: 20px;
+  background-color: rgba(61, 61, 61, 0.61);
+  border-radius: 5px;
+}
+
+#aboutContainer h3 {
+  color: rgba(255, 255, 255, 0.432);
+  font-size: 36px;
+}
+
+#aboutContainer:hover h3 {
+  color: rgba(255, 255, 255, 0.603);
+}
 
 #manageContainer {
   justify-self: center;
@@ -53,7 +75,7 @@
   flex-direction: column;
   margin: 20px;
   padding: 20px;
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(240, 240, 240);
   border-radius: 5px;
   font-size: 13px;
   font-family: Arial, Helvetica, sans-serif;
@@ -85,6 +107,7 @@
 
 #addMessageContainer{
   height: 150px;
+  transition: all 0.5s ease;
 }
 
 #message, #addMessage {
@@ -102,16 +125,26 @@
   color: rgb(65, 65, 65);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 100;
-  transition:  all 0.15s ease;
 }
+
+
 
 #message:hover, #addMessage:hover {
   /* background-color: rgb(249, 249, 249); */
   cursor: pointer;
 }
 
+#message #messageData {
+  height: 100%;
+  justify-items: space-between;
+  align-items: center;
+  position: relative;
+  bottom: 15px;
+  left: 10px;
+}
+
 #message #title {
-  margin: 5px;
+  margin: 10px;
   height: 20px;
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -120,6 +153,8 @@
 
 #message #to {
   margin: 10px;
+  align-self: center;
+  height: 20px;
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
   color:rgb(58, 58, 58);
@@ -127,29 +162,32 @@
 
 #message #text {
   margin: 10px;
+  padding: 5px;
+  height: 30px;
+  width: max-content;
   font-size: 12px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color:rgb(58, 58, 58);
+  border-bottom: 1px solid rgb(170, 170, 170);
+  border-radius: 3px;
+  background-color: rgb(240, 240, 240);
 }
 
 #message #edit {
   justify-self: flex-end;
   height: 15px;
   padding: 5px;
-  margin: 10px;
-  visibility: hidden;
-  font-size: 18px;
+  /* visibility: hidden; */
+  font-size: 20px;
   color: rgb(64, 173, 224);
-}
-
-#message:hover #edit {
-  cursor: pointer;
-  visibility: visible;
-  transition:  all 0.2s ease;
+  position: relative;
+  top: 5px;
+  left: 90%;
 }
 
 #message #edit:hover {
-  background-color: rgb(218, 218, 218);
+  background-color: rgba(209, 209, 209, 0.61);
   border-radius: 3px;
 }
 
@@ -157,11 +195,23 @@
   justify-content: center;
   align-items: center;
   font-size: 64px;
+  height: 150px;
+  width: 95%;
   color: rgb(64, 173, 224);
+}
+
+#addMessage svg {
+  padding: 6px 9px 6px 9px;
+}
+
+#addMessage:hover svg  {
+  background-color: rgba(224, 224, 224, 0.61);
+  border-radius: 50%;
 }
 
 .modal {
   visibility: hidden;
+  transition: visibility 0.4s, opacity 0.4s ease-in-out;
 }
 
 .modalShow {
@@ -171,30 +221,52 @@
 #scheduleContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  height: 200%;
+  width: 100%;
   margin: 20px;
   padding: 20px;
-  background-color: white;
-  border-bottom: grey;
+  background-color: rgb(255, 255, 255);
+  border: 3px solid black;
   border-radius: 5px;
   color: rgb(19, 19, 19);
   font-family: Arial, Helvetica, sans-serif;
   z-index: 100;
   position: relative;
-  bottom:  300%;
+  bottom:  350%;
+  left: 40%;
+  transition:  all 0.15s ease;
+
+  /* transition: all 3s ease; */
+}
+
+#exit {
+  position: relative;
+  padding: 7px;
+  bottom: 5%;
   left: 50%;
+  font-size: 16px;
+  color: grey;
+}
+
+#exit:hover {
+  background-color: rgba(189, 189, 189, 0.582);
+  border-radius: 50%;
 }
 
 #schedule {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
- }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
 
 #scheduleTitle {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  width: 100%;
+  justify-content: flex-start;
   align-items: center;
   font-size: 16px;
   color: rgb(58, 58, 58);
@@ -205,9 +277,35 @@
   flex-direction: column;
 }
 
+/* #timeForm input {
+  background-color: rgb(190, 190, 190);
+} */
+
 #contentForm {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+#contentForm input {
+  background-color: rgb(250, 250, 250);
+  height: 30px;
+  margin: 5px;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid rgb(179, 179, 179);
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+#contentForm input:focus {
+  border-bottom: 2px solid rgb(49, 170, 226);
+}
+
+input:focus {
+  outline: none;
 }
 
 /*
@@ -225,7 +323,7 @@ CONTACTS
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(240, 240, 240);
   border-radius: 5px;
   font-size: 13px;
   font-family: Arial, Helvetica, sans-serif;
@@ -244,6 +342,7 @@ h3 {
   height: max-content;
   width: 100%;
   justify-content: center;
+  align-items: center;
   /* margin: 20px 0 0 50px; */
   padding: 20px;
 }
@@ -251,14 +350,16 @@ h3 {
 #contact, #addContact {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin: 10px;
   padding: 15px;
-  height: max-content;
+  height: 70px;
   background-color: white;
   border-radius: 5px;
   border-bottom: 1px solid grey;
   color: rgb(19, 19, 19);
   font-size: 18px;
+  font-weight: 100;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -270,8 +371,34 @@ h3 {
   color: rgb(64, 173, 224);
 }
 
+#addContact svg {
+  padding: 12px;
+}
+
+#addContact:hover svg  {
+  background-color: rgba(224, 224, 224, 0.61);
+  border-radius: 50%;
+}
+
 
 #contact:hover, #addContact:hover {
   /* background-color: whitesmoke; */
   cursor: pointer;
+}
+
+#addContactContainer {
+  height: 75px;
+  transition: all 0.2s ease-in-out;
+}
+
+#addContactModal {
+  justify-self: center;
+  height: 100px;
+  width: 95%;
+  border: 1px solid black;
+  background-color: whitesmoke;
+  font-size: 14px;
+  color: rgb(27, 27, 27);
+  position: relative;
+  bottom: 200px;
 }
