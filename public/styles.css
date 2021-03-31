@@ -127,8 +127,6 @@
   font-weight: 100;
 }
 
-
-
 #message:hover, #addMessage:hover {
   /* background-color: rgb(249, 249, 249); */
   cursor: pointer;
