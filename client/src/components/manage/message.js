@@ -6,15 +6,17 @@ const Message = ({ msg }) => (
     <div id="edit">
       <i className="fa fa-edit" type="button" />
     </div>
-    <div id="title">
-      {msg.title}
-    </div>
-    <div id="to">
-      to: &nbsp;
-      {msg.receiver}
-    </div>
-    <div id="text">
-      {msg.text}
+    <div id="messageData">
+      <div id="title">
+        {msg.title}
+      </div>
+      <div id="to">
+        to: &nbsp;
+        {msg.receiver}
+      </div>
+      <div id="text">
+        {msg.text}
+      </div>
     </div>
   </div>
 );
