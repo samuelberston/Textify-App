@@ -65,14 +65,14 @@ class Schedule extends React.Component {
           <i className="fa fa-clock" />
         </div>
         <div id="schedule">
-          <form onSubmit={this.postMessage}>
+          <form id="scheduleForm" onSubmit={this.postMessage}>
             <div id="content">
               <input id="title" type="text" placeholder="title" onChange={this.handleChange} required />
-              <label>
+              <div id="numberInput">
                 to:
                 &nbsp;
                 <input id="to" type="number" placeholder="(123) 456-7890" onChange={this.handleChange} required />
-              </label>
+              </div>
               <input id="text" type="text" placeholder="Good morning, love!" onChange={this.handleChange} required />
             </div>
             <div id="time">
