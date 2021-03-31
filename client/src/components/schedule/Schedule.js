@@ -73,7 +73,11 @@ class Schedule extends React.Component {
                 &nbsp;
                 <input id="to" type="number" placeholder="(123) 456-7890" onChange={this.handleChange} required />
               </div>
-              <input id="text" type="text" placeholder="Good morning, love!" onChange={this.handleChange} required />
+              <div>
+                message:
+                &nbsp;
+                <input id="text" type="text" placeholder="Good morning, love!" onChange={this.handleChange} required />
+              </div>
             </div>
             <div id="time">
               <select id="month" type="string" onChange={this.handleChange}>
