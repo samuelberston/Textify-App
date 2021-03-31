@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
-import Content from './Content';
-import Time from './Time';
-
 class Schedule extends React.Component {
   constructor(props) {
     super(props);
@@ -68,7 +65,7 @@ class Schedule extends React.Component {
           <i className="fa fa-clock" />
         </div>
         <div id="schedule">
-          <form>
+          <form onSubmit={this.postMessage}>
             <div id="content">
               <input id="title" type="text" placeholder="title" onChange={this.handleChange} required />
               <label>
@@ -104,12 +101,11 @@ class Schedule extends React.Component {
                 <option id="dayOfWeek" value="Sunday">Sunday</option>
               </select>
               <input id="time" type="time" placeholder="time" onChange={this.handleChange} required />
-              <input type="submit" value="confirm" />
+            </div>
+            <div id="scheduleButton">
+              <input type="submit" value="schedule" />
             </div>
           </form>
-        </div>
-        <div id="scheduleButton">
-          <input type="button" value="schedule" onClick={this.postMessage} />
         </div>
       </div>
     );
