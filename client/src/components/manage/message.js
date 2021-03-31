@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 const Message = ({ msg }) => (
   <div id="message">
     <div id="edit">
-      <i className="fa fa-edit" type="button" />
+      <i className="fas fa-grip-vertical" />
     </div>
     <div id="messageData">
       <div id="title">
         {msg.title}
       </div>
       <div id="to">
-        to: &nbsp;
+        <span>to &nbsp;</span>
         {msg.receiver}
       </div>
       <div id="text">
