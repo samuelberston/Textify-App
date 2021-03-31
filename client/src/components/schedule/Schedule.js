@@ -56,60 +56,62 @@ class Schedule extends React.Component {
     const { clicked, exitModal } = this.props;
     return (
       <div id="scheduleContainer" className={`modal ${clicked ? 'modalShow' : ''}`}>
-        <div id="exit" role="button" onClick={exitModal} onKeyPress={exitModal} tabIndex={0}>
-          <i className="fas fa-times" />
-        </div>
-        <div id="scheduleTitle">
-          <h3> Schedule Your Text </h3>
-          &nbsp; &nbsp;
-          <i className="fa fa-clock" />
-        </div>
-        <div id="schedule">
-          <form id="scheduleForm" onSubmit={this.postMessage}>
-            <div id="content">
-              <input id="title" type="text" placeholder="title" onChange={this.handleChange} required />
-              <div id="numberInput">
-                to:
-                &nbsp;
-                <input id="to" type="number" placeholder="(123) 456-7890" onChange={this.handleChange} required />
+        <div id="modalContent">
+          <div id="exit" role="button" onClick={exitModal} onKeyPress={exitModal} tabIndex={0}>
+            <i className="fas fa-times" />
+          </div>
+          <div id="scheduleTitle">
+            <h3> Schedule Your Text </h3>
+            &nbsp; &nbsp;
+            <i className="fa fa-clock" />
+          </div>
+          <div id="schedule">
+            <form id="scheduleForm" onSubmit={this.postMessage}>
+              <div id="content">
+                <input id="title" type="text" placeholder="title" onChange={this.handleChange} required />
+                <div id="numberInput">
+                  to:
+                  &nbsp;
+                  <input id="to" type="number" placeholder="(123) 456-7890" onChange={this.handleChange} required />
+                </div>
+                <div>
+                  message:
+                  &nbsp;
+                  <input id="text" type="text" placeholder="Good morning, love!" onChange={this.handleChange} required />
+                </div>
               </div>
-              <div>
-                message:
-                &nbsp;
-                <input id="text" type="text" placeholder="Good morning, love!" onChange={this.handleChange} required />
+              <div id="time">
+                <select id="month" type="string" onChange={this.handleChange}>
+                  <option value="January">January</option>
+                  <option value="February">February</option>
+                  <option value="March">March</option>
+                  <option value="April">April</option>
+                  <option value="May">May</option>
+                  <option value="June">June</option>
+                  <option value="July">July</option>
+                  <option value="August">August</option>
+                  <option value="September">September</option>
+                  <option value="October">October</option>
+                  <option value="November">November</option>
+                  <option value="December">December</option>
+                </select>
+                <input id="dayOfMonth" type="number" min="1" max="31" placeholder="day of the month" onChange={this.handleChange} />
+                <select id="dayOfWeek" type="string" onChange={this.handleChange}>
+                  <option id="dayOfWeek" value="Monday">Monday</option>
+                  <option id="dayOfWeek" value="Tuesday">Tuesday</option>
+                  <option id="dayOfWeek" value="Wednesday">Wednesday</option>
+                  <option id="dayOfWeek" value="Thursday">Thursday</option>
+                  <option id="dayOfWeek" value="Friday">Friday</option>
+                  <option id="dayOfWeek" value="Saturday">Saturday</option>
+                  <option id="dayOfWeek" value="Sunday">Sunday</option>
+                </select>
+                <input id="time" type="time" placeholder="time" onChange={this.handleChange} required />
               </div>
-            </div>
-            <div id="time">
-              <select id="month" type="string" onChange={this.handleChange}>
-                <option value="January">January</option>
-                <option value="February">February</option>
-                <option value="March">March</option>
-                <option value="April">April</option>
-                <option value="May">May</option>
-                <option value="June">June</option>
-                <option value="July">July</option>
-                <option value="August">August</option>
-                <option value="September">September</option>
-                <option value="October">October</option>
-                <option value="November">November</option>
-                <option value="December">December</option>
-              </select>
-              <input id="dayOfMonth" type="number" min="1" max="31" placeholder="day of the month" onChange={this.handleChange} />
-              <select id="dayOfWeek" type="string" onChange={this.handleChange}>
-                <option id="dayOfWeek" value="Monday">Monday</option>
-                <option id="dayOfWeek" value="Tuesday">Tuesday</option>
-                <option id="dayOfWeek" value="Wednesday">Wednesday</option>
-                <option id="dayOfWeek" value="Thursday">Thursday</option>
-                <option id="dayOfWeek" value="Friday">Friday</option>
-                <option id="dayOfWeek" value="Saturday">Saturday</option>
-                <option id="dayOfWeek" value="Sunday">Sunday</option>
-              </select>
-              <input id="time" type="time" placeholder="time" onChange={this.handleChange} required />
-            </div>
-            <div id="scheduleButton">
-              <input type="submit" value="schedule" />
-            </div>
-          </form>
+              <div id="scheduleButton">
+                <input type="submit" value="schedule" />
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     );
