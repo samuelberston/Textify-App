@@ -62,8 +62,8 @@ class Schedule extends React.Component {
           </div>
           <div id="scheduleTitle">
             <h3> Schedule Your Text </h3>
-            &nbsp; &nbsp;
-            <i className="fa fa-clock" />
+            {/* &nbsp; &nbsp;
+            <i className="fa fa-clock" /> */}
           </div>
           <div id="schedule">
             <form id="scheduleForm" onSubmit={this.postMessage}>
@@ -72,15 +72,16 @@ class Schedule extends React.Component {
                 <div id="numberInput">
                   to:
                   &nbsp;
-                  <input id="to" type="number" placeholder="(123) 456-7890" onChange={this.handleChange} required />
+                  <input id="to" type="tel" placeholder="+11234567890" onChange={this.handleChange} required />
                 </div>
                 <div>
                   message:
                   &nbsp;
-                  <input id="text" type="text" placeholder="Good morning, love!" onChange={this.handleChange} required />
+                  <input id="text" type="text" placeholder="your message here" onChange={this.handleChange} required />
                 </div>
               </div>
               <div id="time">
+                <p>When do you want it to send?</p>
                 <select id="month" type="string" onChange={this.handleChange}>
                   <option value="January">January</option>
                   <option value="February">February</option>
