@@ -127,8 +127,6 @@
   font-weight: 100;
 }
 
-
-
 #message:hover, #addMessage:hover {
   /* background-color: rgb(249, 249, 249); */
   cursor: pointer;
@@ -209,13 +207,18 @@
   border-radius: 50%;
 }
 
+#addMessage:focus {
+  outline: none;
+}
+
 .modal {
   visibility: hidden;
-  transition: visibility 0.4s, opacity 0.4s ease-in-out;
 }
 
 .modalShow {
   visibility: visible;
+  height: 100%;
+  background-color: black;
 }
 
 #scheduleContainer {
@@ -228,7 +231,8 @@
   margin: 20px;
   padding: 20px;
   background-color: rgb(255, 255, 255);
-  border: 3px solid black;
+  border: 1px solid rgb(173, 173, 173);
+  border-bottom: 3px solid rgb(187, 187, 187);
   border-radius: 5px;
   color: rgb(19, 19, 19);
   font-family: Arial, Helvetica, sans-serif;
@@ -237,21 +241,27 @@
   bottom:  350%;
   left: 40%;
   transition:  all 0.15s ease;
-
-  /* transition: all 3s ease; */
 }
+
+#modalContent {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 5%;
+}
+
 
 #exit {
   position: relative;
-  padding: 7px;
-  bottom: 5%;
-  left: 50%;
-  font-size: 16px;
+  width:max-content;
+  padding: 6px 9px 6px 9px;
+  left: 95%;
+  font-size: 18px;
   color: grey;
 }
 
 #exit:hover {
-  background-color: rgba(189, 189, 189, 0.582);
+  background-color: rgba(189, 189, 189, 0.445);
   border-radius: 50%;
 }
 
@@ -281,13 +291,13 @@
   background-color: rgb(190, 190, 190);
 } */
 
-#contentForm {
+#scheduleForm {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-#contentForm input {
+#scheduleForm input, #scheduleForm select {
   background-color: rgb(250, 250, 250);
   height: 30px;
   margin: 5px;
@@ -296,16 +306,49 @@
   border-bottom: 1px solid rgb(179, 179, 179);
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
-  font-size: 16px;
-  transition: all 0.2s ease-in-out;
+  font-size: 20px;
 }
 
-#contentForm input:focus {
+#scheduleForm #title {
+  width: 50px;
+  margin-left: -5px;
+  /* font-size: 18px; */
+}
+
+#scheduleForm input:focus, #scheduleForm select:focus {
   border-bottom: 2px solid rgb(49, 170, 226);
 }
 
-input:focus {
+input:focus, select:focus {
   outline: none;
+}
+
+#time p {
+  height: 5px;
+  font-size: 18px;
+  color: rgb(19, 19, 19);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+#scheduleButton {
+  align-self: center;
+}
+
+#scheduleButton input {
+  margin: 5px;
+  padding: 5px;
+  height: 40px;
+  font-size: 24px;
+  border:rgb(64, 173, 224) 1px solid;
+  border-bottom: rgb(64, 173, 224) 3px solid;
+  background-color: rgb(241, 241, 241);
+  color:rgb(64, 173, 224);
+}
+
+#scheduleButton input:hover {
+  background-color: rgb(230, 230, 230);
+  cursor: pointer;
 }
 
 /*
