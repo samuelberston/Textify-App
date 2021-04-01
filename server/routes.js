@@ -20,23 +20,19 @@ router.post('/messages', (req, res) => {
   const cron = cronCode(time);
 
   // make this ctually async
-  setTimeout(() => {
-    console.log('await');
-  }, 7000);
 
   // save it in the db
   db.query(`INSERT INTO msgs (title, receiver, text, cron) VALUES ("${title}", "${receiver}", "${text}", "${cron}")`, (err, data) => {
     if (err) { throw err; }
-    res.send(data);
+    console.log('posted');
   });
 
   // schedule a cron task, which is the twilio send message
   const task = scheduleMessage(cron, text, sender, receiver);
-
   // start the task
   task.start();
 
-  res.send('posted');
+  res.send();
 });
 
 router.delete('/message', (req, res) => {

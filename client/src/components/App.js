@@ -24,9 +24,9 @@ class App extends React.Component {
 
   getMessages() {
     axios.get('/messages')
-      .then((res) => {
+      .then((data) => {
         this.setState({
-          messages: res.data,
+          messages: data.data,
         });
       })
       .catch((err) => {
