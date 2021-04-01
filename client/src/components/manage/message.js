@@ -10,9 +10,11 @@ const Message = ({ msg }) => (
       <div id="title">
         {msg.title}
       </div>
-      <div id="to">
+      <div id="receiver">
         <span>to &nbsp;</span>
-        {msg.receiver}
+        <div id="to">
+          {msg.receiver}
+        </div>
       </div>
       <div id="text">
         {msg.text}
