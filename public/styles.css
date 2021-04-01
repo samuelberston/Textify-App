@@ -272,6 +272,10 @@
   border-radius: 50%;
 }
 
+#exit:focus {
+  outline: none;
+}
+
 #schedule {
   display: flex;
   flex-direction: column;
