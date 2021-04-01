@@ -62,8 +62,20 @@
   font-size: 36px;
 }
 
-#aboutContainer:hover h3 {
-  color: rgba(255, 255, 255, 0.603);
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#about #gitHubLink {
+  color: rgba(255, 255, 255, 0.432);
+  font-size: 46px;
+}
+
+#aboutContainer:hover h3, #aboutContainer:hover #gitHubLink, #aboutContainer:hover p {
+  color: rgba(255, 255, 255, 0.767);
 }
 
 #manageContainer {

@@ -1,7 +1,5 @@
 import React from 'react';
 
-import github from './github.png';
-
 const About = () => (
   <div id="aboutContainer">
     <div id="aboutTitle">
@@ -13,9 +11,9 @@ const About = () => (
       <p>
         schedule automated text messages with Textify
       </p>
-      <div id="gitHubLink">
-        <img src={github} alt="" />
-      </div>
+      <a id="gitHubLink" href="https://github.com/samuelberston/MVP" target="_blank" rel="noreferrer">
+        <i className="fab fa-github" title="GitHub Icon" />
+      </a>
     </div>
   </div>
 );
