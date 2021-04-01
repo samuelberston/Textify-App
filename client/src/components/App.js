@@ -54,7 +54,7 @@ class App extends React.Component {
         <div id="controller">
           <About />
           { messages !== null
-            ? <Manage messages={messages} />
+            ? <Manage messages={messages} getMessages={this.getMessages} />
             : ''}
           { contacts !== null
             ? <Contacts contacts={contacts} />
