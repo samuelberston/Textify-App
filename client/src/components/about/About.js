@@ -7,14 +7,12 @@ const About = () => (
         About
       </h3>
     </div>
-    <div id="about">
-      <p>
-        schedule automated text messages with Textify
-      </p>
-      <p>
-        it is such an amazing thing
-      </p>
-    </div>
+    <p>
+      schedule automated text messages with Textify
+    </p>
+    <a id="gitHubLink" href="https://github.com/samuelberston/MVP" target="_blank" rel="noreferrer">
+      <i className="fab fa-github" title="GitHub Icon" />
+    </a>
   </div>
 );
 

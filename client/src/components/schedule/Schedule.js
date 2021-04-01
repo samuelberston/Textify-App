@@ -5,7 +5,6 @@ import axios from 'axios';
 class Schedule extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       title: null,
       to: null,
@@ -28,9 +27,11 @@ class Schedule extends React.Component {
   postMessage(e) {
     e.preventDefault();
 
+    const { getMessages } = this.props;
     const {
       title, to, text, dayOfWeek, month, dayOfMonth, time,
     } = this.state;
+
     const body = {
       title,
       receiver: to,
@@ -44,8 +45,11 @@ class Schedule extends React.Component {
     };
 
     axios.post('/messages', body)
-      .then((res) => {
-        console.log(res);
+      .then(() => {
+        getMessages()
+          .catch((err) => {
+            throw err;
+          });
       })
       .catch((err) => {
         throw err;
@@ -122,6 +126,7 @@ class Schedule extends React.Component {
 Schedule.propTypes = {
   clicked: PropTypes.bool.isRequired,
   exitModal: PropTypes.func.isRequired,
+  getMessages: PropTypes.func.isRequired,
 };
 
 export default Schedule;
