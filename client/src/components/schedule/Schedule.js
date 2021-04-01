@@ -47,7 +47,6 @@ class Schedule extends React.Component {
     axios.post('/messages', body)
       // this is not working -- why?
       .then(() => {
-        console.log('getMessage');
         getMessages();
       })
       .catch((err) => {

@@ -22,9 +22,8 @@ router.post('/messages', (req, res) => {
   // make this ctually async
 
   // save it in the db
-  db.query(`INSERT INTO msgs (title, receiver, text, cron) VALUES ("${title}", "${receiver}", "${text}", "${cron}")`, (err, data) => {
+  db.query(`INSERT INTO msgs (title, receiver, text, cron) VALUES ("${title}", "${receiver}", "${text}", "${cron}")`, (err) => {
     if (err) { throw err; }
-    console.log('posted');
   });
 
   // schedule a cron task, which is the twilio send message
