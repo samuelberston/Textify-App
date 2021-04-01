@@ -11,7 +11,7 @@ const Message = ({ msg }) => (
         {msg.title}
       </div>
       <div id="receiver">
-        <span>to &nbsp;</span>
+        <span>to: &nbsp;</span>
         <div id="to">
           {msg.receiver}
         </div>

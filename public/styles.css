@@ -170,6 +170,12 @@
   height: 20px;
 }
 
+#message #receiver {
+  margin: 5px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
 #message #to {
   display: flex;
   align-items: center;
@@ -186,6 +192,7 @@
   border-radius: 3px;
   background-color: rgb(240, 240, 240);
 }
+
 
 #message #text {
   margin: 10px;
