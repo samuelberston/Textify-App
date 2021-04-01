@@ -1,5 +1,7 @@
 import React from 'react';
 
+import github from './github.png';
+
 const About = () => (
   <div id="aboutContainer">
     <div id="aboutTitle">
@@ -11,9 +13,9 @@ const About = () => (
       <p>
         schedule automated text messages with Textify
       </p>
-      <p>
-        it is such an amazing thing
-      </p>
+      <div id="gitHubLink">
+        <img src={github} alt="" />
+      </div>
     </div>
   </div>
 );
