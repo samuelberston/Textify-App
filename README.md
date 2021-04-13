@@ -9,8 +9,6 @@ Service-Oriented Architecture
 - database
 - service
 
-Diagram
-
 *technologies*
 
 developer
