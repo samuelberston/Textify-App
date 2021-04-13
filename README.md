@@ -1,7 +1,4 @@
-The goal of this project is to build an app that allows a user to schedule automated text messages.
-
-
-
+This app allows a user to schedule automated text messages using the Twilio API and node-cron library.
 
 
 *system design*
