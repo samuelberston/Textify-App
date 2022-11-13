@@ -1,4 +1,0 @@
-module.exports = {
-  TWILIO_ACCOUNT_SID: 'FILL_ME_IN',
-  TWILIO_AUTH_TOKEN: 'FILL_ME_IN',
-};

@@ -1,6 +1,4 @@
 const express = require('express');
-const cronCode = require('./controllers/cronCode.js');
-const scheduleMessage = require('./controllers/service/scheduleMessage.js');
 const db = require('./db.js');
 
 const router = express.Router();
